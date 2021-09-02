@@ -1,0 +1,126 @@
+@import "~antd/lib/style/themes/default.less";
+
+html,
+body,
+#root {
+  height: 100%;
+  color: #4a4a4a;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Roboto Regular', 'PingFang SC', 'Lantinghei SC', 'Microsoft Yahei', STXihei,
+    'Microsoft JhengHei', -apple-system, BlinkMacSystemFont, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', Avenir, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead>tr,
+    &-tbody>tr {
+
+      >th,
+      >td {
+        white-space: pre;
+
+        >span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+Compatible with IE11 => AntDesign Pro原始的CSS
+========================================================================== */
+@media screen and(-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  body .ant-design-pro>.ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+Vertical menu height
+========================================================================== */
+.ant-menu-vertical>.ant-menu-item,
+.ant-menu-vertical-left>.ant-menu-item,
+.ant-menu-vertical-right>.ant-menu-item,
+.ant-menu-inline>.ant-menu-item,
+.ant-menu-vertical>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-vertical-left>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-vertical-right>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title {
+  height: 50px;
+  line-height: 50px;
+}
+
+/* ==========================================================================
+Let vertical menu item verticle align center
+========================================================================== */
+.ant-menu-inline.ant-menu-root .ant-menu-item,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s, background 0.3s, padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* ==========================================================================
+Ant Carousel
+========================================================================== */
+.ant-carousel .slick-dots li {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.ant-carousel .slick-dots-bottom {
+  bottom: -12px;
+}
+
+.ant-carousel .slick-dots li button {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(57, 57, 57);
+  border-radius: 50%;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background-color: #82eafa;
+}

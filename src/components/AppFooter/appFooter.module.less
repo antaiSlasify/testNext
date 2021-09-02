@@ -1,0 +1,112 @@
+@import (reference) '../../../styles/custom.less';
+
+.footer {
+  justify-content: center;
+  padding: 2rem 1.5rem 3rem;
+  background-color: #333a45 !important;
+  .flex-row;
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    .flex-column;
+
+    @media screen and (max-width: @screen-xl) {
+      width: 100%;
+    }
+
+    .upper {
+      justify-content: space-around;
+      width: inherit;
+
+      @media screen and (max-width: @screen-lg) {
+        // 992px
+        .flex-column;
+      }
+
+      .flex-row;
+
+      .left {
+        width: 200px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        .flex-column;
+
+        .logo {
+          width: 133px;
+          padding: 10px 0;
+        }
+
+        .footerSlogan {
+          color: white;
+          font-size: 0.75rem !important;
+          line-height: 1.5rem;
+        }
+
+        .select {
+          width: 175px;
+        }
+      }
+
+      .right {
+        padding: 10px 0 20px;
+        .flex-row;
+
+        @media screen and (max-width: @screen-sm) {
+          // 576px
+          .flex-column;
+        }
+      }
+    }
+
+    .lower {
+      .flex-column;
+
+      gap: 2rem;
+      align-items: center;
+      margin-top: 20px;
+
+      .socialLinks {
+        .flex-row;
+
+        justify-content: space-between;
+        width: 140px;
+        text-align: center;
+
+        svg {
+          transition: all 0.5s;
+
+          &:hover {
+            fill: white;
+          }
+        }
+      }
+
+      .copyRight {
+        .flex-column;
+
+        color: white;
+
+        span {
+          text-align: center;
+        }
+      }
+
+      .icp {
+        a {
+          color: @secondary-text;
+        }
+      }
+
+      .ipv {
+        width: 50px;
+        color: #ccc;
+        font-size: 0.8rem;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    }
+  }
+}

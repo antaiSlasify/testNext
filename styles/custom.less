@@ -1,0 +1,107 @@
+@import "~antd/lib/style/themes/default.less";
+
+/* ==========================================================================
+Variable
+========================================================================== */
+
+@template-nav-bg-color: #444f60;
+@login-btn-hover-color: #eee;
+@slasify-green: #00d1b2;
+@slasify-blue: #2b3460;
+@light-blue: #82eafa;
+@dark-blue: #464baf;
+@secondary-text: #7c7c7c;
+
+/* ==========================================================================
+Color Related
+========================================================================== */
+.gradient-right {
+  background: -webkit-linear-gradient(right, @dark-blue 0, #46afeb 100%);
+}
+
+.gradient-left {
+  background: -webkit-linear-gradient(left, @dark-blue 0, #46afeb 100%);
+}
+
+/* ==========================================================================
+Theme font
+========================================================================== */
+@font-en-bold: 'Roboto Bold', 'PingFang SC', 'Lantinghei SC', 'Microsoft Yahei', STXihei,
+  'Microsoft JhengHei', -apple-system, BlinkMacSystemFont, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol', Avenir, Arial, sans-serif, FontAwesome;
+
+.bold {
+  font-weight: 600 !important;
+}
+
+.text-bold {
+  font-weight: 600 !important;
+  font-family: @font-en-bold;
+  .bold;
+}
+
+.text-bold-white {
+  color: white !important;
+  .text-bold;
+}
+
+/* ==========================================================================
+RWD
+========================================================================== */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.sectoin-container-rwd {
+  margin: 40px auto;
+
+  @media screen and (min-width: @screen-md) {
+    // 768px 以上
+    width: 700px;
+  }
+
+  @media screen and (min-width: @screen-lg) {
+    // 992px 以上
+    width: 960px;
+  }
+
+  @media screen and (min-width: @screen-xl) {
+    // 1200px 以上
+    width: 1152px;
+  }
+
+  @media screen and (max-width: @screen-lg) {
+    //996px 以下
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: @screen-md) {
+    // 768px 以下
+    width: 450px;
+  }
+
+  @media screen and (max-width: @screen-xs) {
+    // 480px 以下
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.isMobileHide {
+  @media screen and (max-width: @screen-lg) {
+    display: none;
+  }
+}
+
+.notMobileHide {
+  @media screen and (min-width: @screen-lg) {
+    display: none;
+  }
+}
