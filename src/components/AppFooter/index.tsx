@@ -2,12 +2,15 @@ import { Layout, Select } from 'antd';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 
+import { constant } from '../../utils/constant';
 import { setLocaleCookie } from '../../utils/i18n';
 
 import styles from './appFooter.module.less';
 
 const { Footer } = Layout;
 const { Option } = Select;
+
+const { zh_TW, zh_CN, en_US } = constant;
 
 const AppFooter = () => {
   const intl = useIntl();
@@ -35,9 +38,9 @@ const AppFooter = () => {
               className={styles.select}
               onChange={onLangChange}
             >
-              <Option value="en-US">Enlish</Option>
-              <Option value="zh-CN">中文 ( 简体 )</Option>
-              <Option value="zh-TW">中文 ( 繁體 )</Option>
+              <Option value={en_US}>Enlish</Option>
+              <Option value={zh_CN}>中文 ( 简体 )</Option>
+              <Option value={zh_TW}>中文 ( 繁體 )</Option>
             </Select>
           </div>
           <div className={styles.right}></div>
