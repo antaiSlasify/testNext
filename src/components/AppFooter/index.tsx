@@ -1,10 +1,4 @@
 import { Layout, Select } from 'antd';
-import {
-  FacebookOutlined,
-  GlobalOutlined,
-  HeartFilled,
-  LinkedinOutlined,
-} from '@ant-design/icons';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 
