@@ -2,8 +2,6 @@ import Head from 'next/head';
 import { Button } from 'antd';
 import { useIntl } from 'react-intl';
 
-import Footer from '../components/Footer';
-
 import styles from '../../styles/Home.module.less';
 
 const Home = () => {
@@ -60,7 +58,6 @@ const Home = () => {
           </a>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
