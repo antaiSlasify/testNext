@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/"
+  to = "/en-US"
+  status = 302
+  conditions = {Language = ["en-US"]}
+
+[[redirects]]
+  from = "/"
+  to = "/zh-TW"
+  status = 302
+  conditions = {Language = ["zh-TW"]}
+
+[[redirects]]
+  from = "/"
+  to = "/zh-CN"
+  status = 302
+  conditions = {Language = ["zh-CN"]}
